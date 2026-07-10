@@ -69,6 +69,10 @@ After uploading to GitHub, add these repository secrets if you want daily emails
 
 The workflow in `.github/workflows/daily-digest.yml` runs once per weekday morning.
 
+There is also a lightweight smoke-check workflow for pipeline control. It installs
+the Python dependencies, compiles the Streamlit app modules, and imports the
+digest code so simple breakages are caught before the scheduled digest runs.
+
 ## Suggested next upgrades
 
 - Add Semantic Scholar or OpenAlex as extra sources.
